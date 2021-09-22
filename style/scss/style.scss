@@ -1,0 +1,24 @@
+
+
+@import 'reset.scss';
+@import 'base.scss';
+@import 'components';
+@import 'header.scss';
+@import 'introduction.scss';
+@import 'footer.scss';
+@import 'description.scss';
+
+
+// Deleta depois isso 
+img {
+    height: 100px;
+}
+
+body {
+    background-color: $c__very-light-gray;
+}
+
+html {
+    font-family: 'Red Hat Display', sans-serif;
+}
+

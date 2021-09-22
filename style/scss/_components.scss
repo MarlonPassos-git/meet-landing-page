@@ -1,0 +1,105 @@
+ .button {
+
+    height: 58px; 
+    font-family: 'Red Hat Display', sans-serif;
+    font-weight: 900;
+    font-size: $fs__xs;
+    color: $c__white;
+    border-radius: 58px;
+    padding: 0 31px;
+    border: none;
+ }
+
+ .paragraph {
+   text-align: center;
+   font-weight: 500;
+   line-height: rem(26);
+   color: $c__dark-grayish-blue;
+   @include responsiveFont($fs__s, $fs__s, $fs__xs);
+ }
+
+
+.icon {
+    height: rem(56);
+    width: rem(56);
+    border-radius: 50%;
+    border: 1px solid #87879D25;
+    background-color: $c__very-light-gray2;
+    display: grid;
+    place-items: center;
+    color: #87879D;
+    font-size: 16px;
+
+    position: relative;
+    left: calc(50% - 28px);
+    top: 28px;  
+
+    animation: a1 1s 1 ;
+    
+
+    &::before {
+      content: "";
+      width: 1px;
+      height: 84px;
+      background-color: #87879D25;
+      position: absolute;
+      top: -85px;
+      left: 50%;
+
+      animation: a2 1.5s 1 ;
+      
+  
+    }
+}
+
+
+@keyframes a1 {
+  from {
+    top: -56px;
+    opacity: 0;
+    color:#87879D00;
+  }
+  to {
+    top: 0;
+    opacity: 100%;
+    color: #87879D;
+  }
+}
+
+@keyframes a2 {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 84px;
+  }
+}
+
+.icon--1 {
+  margin: 194px 0 64px ;
+  top: 0;
+
+  
+
+  @media (max-width: 768px) {
+    margin-top: 164px;
+  }
+
+  @media (max-width: 375px) {
+    margin-top: 148px;
+  }
+
+}
+
+.icon--2 {
+  margin-top: 128px;
+
+  @media (max-width: 1030px) {
+    margin-top: 136px;
+  }
+
+  @media (max-width: 375px) {
+    margin-top: 120px;
+  }
+
+}

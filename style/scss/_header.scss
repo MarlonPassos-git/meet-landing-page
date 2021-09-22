@@ -1,0 +1,24 @@
+.header {
+    display: grid;
+    place-items: center;
+    
+    @include heightFlex(130, 140, 169);
+    
+    &__logo {
+        height: 28px;
+        animation: a4 1s 1 ease;
+        object-fit: cover;
+        object-position: left;
+
+    }
+    
+} 
+
+@keyframes a4 {
+    from {
+      width: 0px;
+    }
+    to {
+      width: 119px;
+    }
+  }

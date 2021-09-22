@@ -1,0 +1,153 @@
+.introduction {
+
+    display: grid;
+
+    height: auto;
+
+    grid-template:
+        "img1               .   title     title     .   img2" 
+        "img1               .   paragraph paragraph .   img2" 116px
+        "img1               .   buttons    buttons    .   img2" 58px  /minmax(1px, 360px) 1fr 290px 290px 1fr minmax(1px, 360px);
+
+    justify-items: center;
+    align-items: end;
+    
+
+    @media (max-width: 768px) {
+        grid-template:
+            "img1     . img2"
+            "title   title  title"
+            "paragraph paragraph paragraph"
+            "buttons  buttons  buttons " 
+            / 1fr 4.16vw 1fr;
+    }
+
+    &__image {
+
+        width: 100%;
+        @include heightFlex(153, 303, 358);
+        background-repeat: no-repeat;
+        
+
+        
+        @media (max-width: 768px) {
+            background-size: cover;
+        }
+
+
+
+        &--left {
+            grid-area: img1;
+            background-image: url(/images/desktop/image-hero-left.png);
+            background-position: right top;
+
+
+
+
+        }
+
+        &--right {
+            grid-area: img2;
+            background-image: url(/images/desktop/image-hero-right.png);
+            background-position: left bottom;
+
+            
+        }
+
+    }
+
+    &__title {
+        grid-area: title;
+        line-height: 64px;
+        text-align: center;
+
+        
+
+        @include responsiveFont($fs__xl, $fs__l, $fs__lm);
+
+        @media (max-width:768px) {
+            margin-top: 8.5vw;
+            line-height: 48px;
+        }
+
+        @media (max-width:375px) {
+            line-height: 44px;
+        }
+
+    }
+
+    &__paragraph {
+        grid-area: paragraph;
+        max-width: 60ex;
+        margin: 34px 24px 32px;
+        
+
+        @media (max-width: 768px) {
+            max-width: 55ex;
+            margin: 24px 24px 32px;
+        }
+
+        @media (max-width: 375px) {
+            max-width: 40ex;
+        }
+
+
+        
+    }
+
+    &__buttons {
+        grid-area: buttons;
+        display: flex;
+        gap: rem(16);
+        
+        @media (max-width: 375px) {
+            flex-direction: column;
+        }
+        
+    }
+
+    &__button {
+
+        
+
+
+        &--download {
+
+            background-color: $c__dark-moderate-cyan;
+            transition: 0.3s;
+
+            
+
+            &:hover{
+                cursor: pointer;
+                background-color: #71C0D4;
+            }
+
+        }
+
+        &--anchor {
+
+            display: grid;
+            place-content: center;
+            background-color: $c__dark-moderate-violet;
+            text-decoration: none;
+
+            &:hover{
+                cursor: pointer;
+                background-color: #B18BDD;
+                transition: 0.3s;
+            }
+        }
+    }
+
+
+
+
+
+}
+
+.introduction__button-download--version {
+    color:$c__very-soft-cyan;
+}
+
+

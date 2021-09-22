@@ -1,0 +1,54 @@
+// ----- Functions ----- //
+
+@mixin heightFlex( $minHeight, $mediunHeight, $maxHeight, $mobileWidth: 375, $tableWidth: 768) {
+
+    max-height: $maxHeight * 1px;
+    min-height: $minHeight * 1px;
+    height:  floor($mediunHeight / $tableWidth * 100 * 1vw) ;
+    
+    @media (max-width: $tableWidth * 1px) {
+        max-height: $mediunHeight * 1px;
+        height: floor($minHeight / $mobileWidth * 100 * 1vw);
+    } 
+}
+
+@mixin responsiveFont( $desktopFont, $tableFont, $mobileFont, $mobileWidth: 375, $tableWidth: 768) {
+
+    font-size: $desktopFont;
+        
+    @media (max-width: 768px) {
+        font-size: $tableFont;
+    }
+
+    @media (max-width: 375px) {
+        font-size: $mobileFont;
+    }    
+}
+
+@function rem($pixels, $contexto: 16) {
+    @return ($pixels / $contexto) * 1rem;
+}
+
+// ----- Colors ----- //
+$c__dark-moderate-cyan: #4d96a9;
+$c__dark-moderate-violet: #855fb1;
+$c__very-dark-grayish-blue: #28283d;
+$c__dark-grayish-blue: #87879d;
+$c__very-light-gray: #f2f2f2;
+$c__white: #fff;
+$c__pale-violet: #d9b8ff;
+$c__very-soft-cyan: #8fe3f9;
+$c__very-light-gray2: #fafafa;
+
+
+// ----- Font Size ----- //
+
+
+$fs__xl: rem(64);
+$fs__l: rem(48);
+$fs__lm: rem(40);
+$fs__m: rem(32);
+$fs__s: rem(18);
+$fs__xs: rem(16);
+
+
