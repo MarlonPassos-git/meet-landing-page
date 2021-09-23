@@ -168,12 +168,12 @@
 }
 .introduction__image--left {
   grid-area: img1;
-  background-image: url(/images/desktop/image-hero-left.png);
+  background-image: url(./images/desktop/image-hero-left.png);
   background-position: right top;
 }
 .introduction__image--right {
   grid-area: img2;
-  background-image: url(/images/desktop/image-hero-right.png);
+  background-image: url(./images/desktop/image-hero-right.png);
   background-position: left bottom;
 }
 .introduction__title {
